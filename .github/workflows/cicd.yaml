@@ -48,7 +48,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.22.x'
+          go-version: '1.22.0'
 
       - name: Run golangci-lint
         uses: golangci/golangci-lint-action@v6
@@ -82,7 +82,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/go-web-app:${{ github.run_id }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/go-web-application:${{ github.run_id }}
 
   # -------------------------------
   # 🧾 Update Helm Chart Tag
